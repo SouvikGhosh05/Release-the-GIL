@@ -1,6 +1,6 @@
 # RELEASE THE GIL
 
-==============================================================================
+===========================================================================
 
 **Python is a great language 😃, but the GIL (Global Interpreter Lock) is a huge**
 **bottleneck 😢. It's a lock that is held while executing any Python code. This**
@@ -70,8 +70,8 @@ PyPy has the GIL but PyPy-STM(Software Transactional Memory) doesn't have the GI
 ## References
 
 You can know more about this topic which I mentioned below:
-[Python's Infamous GIL - Larry Hastings](https://www.youtube.com/watch?v=sxMl4DsYgpw)
-[The Gilectomy project - Larry Hastings](https://www.youtube.com/watch?v=4zeHStBowEk)
-[Inside the Python GIL - David Beazley](https://www.youtube.com/watch?v=ph374fJqFPE&t=20s)
+    *[Python's Infamous GIL - Larry Hastings](https://www.youtube.com/watch?v=sxMl4DsYgpw)
+    *[The Gilectomy project - Larry Hastings](https://www.youtube.com/watch?v=4zeHStBowEk)
+    *[Inside the Python GIL - David Beazley](https://www.youtube.com/watch?v=ph374fJqFPE&t=20s)
 
 Happy Coding with Python! 😊
