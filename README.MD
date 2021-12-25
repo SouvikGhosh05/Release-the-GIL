@@ -51,6 +51,7 @@ Although, there are multiple ways we can get rid of this. Those are:
 4. Using Pybind11 if you are good enough to write C++ code.
 5. If you're not satisfied with all I've mentioned, you can write raw C code provided Python C API.
 
+In this repo, you will see how to release the GIL using Cython.
 
 Note that, Python functions are made in such a way, that those can release the GIL when it's I/O bound. Such as:
 1. While reading from a file, or writing to a file.
