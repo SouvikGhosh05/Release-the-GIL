@@ -3,16 +3,16 @@
 ===========================================================================
 
 **Python is a great language 😃, but the GIL (Global Interpreter Lock) is a huge**
-**bottleneck 😢. It's a lock that is held while executing any Python code. This**
-**means that if you have a bunch of Python threads running, they all have to**
+**bottleneck 😢. It's a lock that is held by the interpreter while executing any Python code. This**
+**means that if you have a bunch of Python threads running, they all will have to**
 **wait for the GIL to be released. This can be a problem, because the GIL is**
-**held for a long time, and it can be a problem for better performance.**
+**held for a long time, which can lead to many performance issues.**
 
 **The GIL is released whenever a thread is ready to run, and it's held back**
 **until all threads are ready to run. This means that if you have a bunch of**
 **Python threads running, they'll all be waiting for the GIL to be released**
-**and they'll all be blocked. So, even though the threads will run concurrently,**
-**only one thread will be allowed to run at the same time.**
+**but they'll all be blocked still after release. So, even though the threads will run concurrently,**
+**only one thread will be allowed to run at the exact same time.**
 
 As you see, there are no way to get rid of the GIL from Python Interpreters.
 
