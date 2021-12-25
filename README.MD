@@ -33,20 +33,24 @@ provides atomicity.
 ## What is the benefit of the GIL?
 
 Ans: The following reasons are:
+```text
     1. It's easy to write C extensions in Python and provides better C API rather than many popular languages like Java or C#.
     2. GIL makes single threaded programs faster.
     3. CPython Interpreter loading time is faster than JVM loading time because of GIL.
     4. Developers don't have to worry about thread-safety, because GIL always provides thread safety.
+```
 
 ## But, the big question is: How can we get rid of the GIL for getting performance?
 
 Ans: As a Python coder, you should always be aware of the performance you're getting from code, and the GIL.
 Although, there are multiple ways we can get rid of this. Those are:
+```text
     1. Using numpy arrays for fast computation or some other good libraries which provides C API.
     2. Using Cython or Numba, although Cython is preferred.
     3. Using OpenMP API for Python.
     4. Using Pybind11 if you are good enough to write C++ code.
     5. If you're not satisfied with all I've mentioned, you can write raw C code provided Python C API.
+```
 
 Note that, Python functions are made in such a way, that those can release the GIL when it's I/O bound. Such as:
 
@@ -70,8 +74,11 @@ PyPy has the GIL but PyPy-STM(Software Transactional Memory) doesn't have the GI
 ## References
 
 You can know more about this topic which I mentioned below:
-    *[Python's Infamous GIL - Larry Hastings](https://www.youtube.com/watch?v=sxMl4DsYgpw)
-    *[The Gilectomy project - Larry Hastings](https://www.youtube.com/watch?v=4zeHStBowEk)
-    *[Inside the Python GIL - David Beazley](https://www.youtube.com/watch?v=ph374fJqFPE&t=20s)
+
+```text
+1. [Python's Infamous GIL - Larry Hastings](https://www.youtube.com/watch?v=sxMl4DsYgpw)
+2. [The Gilectomy project - Larry Hastings](https://www.youtube.com/watch?v=4zeHStBowEk)
+3. [Inside the Python GIL - David Beazley](https://www.youtube.com/watch?v=ph374fJqFPE&t=20s)
+```
 
 Happy Coding with Python! 😊
