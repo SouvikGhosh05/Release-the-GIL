@@ -1,6 +1,6 @@
 # RELEASE THE GIL
 
-===========================================================================
+-----------------------------------------------------------------------------------
 
 **Python is a great language 😃, but the GIL (Global Interpreter Lock) is a huge**
 **bottleneck 😢. It's a lock that is held by the interpreter while executing any Python code. This**

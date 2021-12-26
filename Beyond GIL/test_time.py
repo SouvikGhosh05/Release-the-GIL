@@ -24,7 +24,6 @@ def with_python(func):
 
 @with_python
 def adder(a, b):
-
     for i in range(b):
         a += i
     return a
@@ -32,7 +31,6 @@ def adder(a, b):
 
 @with_python
 def subtractor(a, b):
-    t = timer()
     for i in range(b):
         a -= i
     return a
