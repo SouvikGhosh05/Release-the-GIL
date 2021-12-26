@@ -1,0 +1,4 @@
+Cython
+Numba==0.54.0
+requests==2.26.0
+aiohttp==3.8.1
