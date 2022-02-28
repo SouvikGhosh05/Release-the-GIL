@@ -15,6 +15,38 @@
 **only one thread will be allowed to run at the exact same time.**
 
 As you see, there are no way to get rid of the GIL from Python Interpreters.
+But, in this project you'll see I've used Cython to run Python code in multi-core CPUs to get its maximum benefit of getting better performance.
+
+To compile Cython code, make sure you have Python installed on your machine and you need Unix-like(Linux/Mac) environment.
+For windows, you can use Git Bash or WSL to get the Unix-like environment to compile.
+
+To compile Cython code, run the following command:
+
+```bash
+    #!/bin/bash
+    $ make
+```
+
+or,
+
+```bash
+    #!/bin/bash
+    $ make build
+```
+
+To run tests, run the following command:
+
+```bash
+    #!/bin/bash
+    $ make test
+```
+
+And, to clean up the Cython build, run the following command:
+
+```bash
+    #!/bin/bash
+    $ make clean
+```
 
 ## You may ask, why Python intepreter has this GIL?
 
@@ -39,7 +71,6 @@ Ans: The following reasons are:
 3. CPython Interpreter loading time is faster than JVM loading time because of GIL.
 4. Developers don't have to worry about thread-safety, because GIL always provides thread safety.
 
-
 ## But, the big question is: How can we get rid of the GIL for getting performance?
 
 Ans: As a Python coder, you should always be aware of the performance you're getting from code, and the GIL.
@@ -54,6 +85,7 @@ Although, there are multiple ways we can get rid of this. Those are:
 In this repo, you will see how to release the GIL using Cython.
 
 Note that, Python functions are made in such a way, that those can release the GIL when it's I/O bound. Such as:
+
 1. While reading from a file, or writing to a file.
 2. While reading from a socket, or writing to a socket.
 3. While reading from a database, or writing to a database.
@@ -74,8 +106,9 @@ PyPy has the GIL but PyPy-STM(Software Transactional Memory) doesn't have the GI
 ## References
 
 You can know more about this topic which I mentioned below:
+
 1. [Python's Infamous GIL - Larry Hastings](https://www.youtube.com/watch?v=sxMl4DsYgpw)
 2. [The Gilectomy project - Larry Hastings](https://www.youtube.com/watch?v=4zeHStBowEk)
 3. [Inside the Python GIL - David Beazley](https://www.youtube.com/watch?v=ph374fJqFPE&t=20s)
 
-Happy Coding with Python! 😊
+Happy Coding! 😊
