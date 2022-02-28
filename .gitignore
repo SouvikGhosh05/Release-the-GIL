@@ -1,1 +1,6 @@
 .vscode/
+.pytest_cache/
+src/Beyond-GIL/__pycache__/
+src/Beyond-GIL/.pytest_cache/
+src/Beyond-GIL/build/
+src/Beyond-GIL/src_Cython/add_sub.html
