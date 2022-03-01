@@ -28,7 +28,7 @@ async def get_data(s):
     """
 
     async with s.get("https://www.google.com") as resp:
-        text = await resp.text()
+        await resp.text()
 
 
 async def main():

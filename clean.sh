@@ -7,7 +7,7 @@ read -r REPLY
 
 if [[ $REPLY = @(Yes|yes|y) ]]; then
 
-    cd src/Beyond-GIL/  && rm -rf add_n_sub.cpython-39-x86_64-linux-gnu.so  &&
+    cd src/Beyond-GIL/  && rm -rf ./*.so  &&
     cd src_Cython/      && rm -rf add_sub.c add_sub.html
     echo "Cython build files cleaned."
 else

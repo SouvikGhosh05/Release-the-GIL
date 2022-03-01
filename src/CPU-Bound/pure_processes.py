@@ -1,4 +1,3 @@
-from threading import Thread
 from multiprocessing import Process
 from timeit import default_timer as timer
 
@@ -29,6 +28,7 @@ if __name__ == "__main__":
     )  # Time taken: 1.4732 seconds(approx)
 
     """
-    Using processes, it took less time because, GIL is not issue for running in separate processes, since each process has its own GIL.
+    Using processes, it took less time because, GIL is not issue for running in separate processes,
+    since each process has its own GIL.
     So, multiprocessing is the way get parellism for CPU bound tasks from Python interpreter.
     """

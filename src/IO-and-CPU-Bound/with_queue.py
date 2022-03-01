@@ -1,6 +1,5 @@
 import threading
 from queue import Queue
-from typing import Optional
 from timeit import default_timer as timer
 import urllib.request
 import sys
