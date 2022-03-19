@@ -1,8 +1,8 @@
 #!/bin/bash
 
 build-and-install_required_packages() {
+    if ! python3 -m flake8 --version > /dev/null 2>&1; then python3 -m pip install "$(sed -n '/flake8/p' requirements.txt)"; fi
     cd src/Beyond-GIL/ && python3 setup.py build_ext --inplace -f
-    if ! python3 -m flake8 --version > /dev/null 2>&1; then python3 -m pip install "$(sed -n '/flake8/p' ../../requirements.txt)"; fi
 }
 
 if python3 --version > /dev/null 2>&1; then
@@ -24,7 +24,7 @@ EOF
         
     else
         echo "Cython is not installed. Installing...."
-        python3 -m pip install "$(sed -n '/Cython/p' ../../requirements.txt)"
+        python3 -m pip install "$(sed -n '/Cython/p' requirements.txt)"
         build-and-install_required_packages
         echo "Cython Build finished."
     fi
