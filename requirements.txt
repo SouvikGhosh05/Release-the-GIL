@@ -1,5 +1,4 @@
 Cython==0.29.28
-pytest==7.0.1
 aiohttp==3.8.1
 numba==0.55.1
 flake8==4.0.1

@@ -1,7 +1,7 @@
 from cython.parallel cimport parallel
 from cython.parallel import prange
+cimport cython
 cimport openmp
-import cython
 
 cdef extern from "adder.c" nogil:       #'nogil' flag is needed to run in 'with nogil' context
     long long adder_fromc(long long a, long long b)

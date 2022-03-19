@@ -13,16 +13,15 @@ def decrement(numbers, from_start=None):  # CPU bound
         numbers -= 1
         if q.empty():
             continue
-        else:
-            """
+        """
             I added this method because this thread will run most of the time because it's mostly CPU bound
 
             """
-            print(numbers)
-            print(q.get(block=False), end="\n")
-            print(
-                "Time took get response after starting threads:-", timer() - from_start
-            )  # It tell when exactly I/O bound returns value after both the threads started to run
+        print(numbers)
+        print(q.get(block=False), end="\n")
+        print(
+            "Time took get response after starting threads:-", timer() - from_start
+        )  # It tell when exactly I/O bound returns value after both the threads started to run
 
 
 def get_data():  # I/O bound
